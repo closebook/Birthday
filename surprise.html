@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Surprise ❤️</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:linear-gradient(120deg,#ff4d6d,#ff758c);
+color:white;
+font-family:Poppins;
+text-align:center;
+overflow:hidden;
+}
+
+h1{
+font-size:60px;
+margin-bottom:10px;
+}
+
+p{
+font-size:22px;
+max-width:600px;
+padding:0 20px;
+}
+
+/* BUTTON */
+
+button{
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+background:white;
+color:#ff4d6d;
+font-weight:bold;
+}
+
+/* HEARTS */
+
+.heart{
+position:fixed;
+bottom:-10px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0)}
+100%{transform:translateY(-100vh)}
+}
+
+/* GIFT BOX */
+
+.gift{
+font-size:80px;
+cursor:pointer;
+margin-top:20px;
+transition:0.4s;
+}
+
+.gift:hover{
+transform:scale(1.2);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Surprise ❤️</h1>
+
+<p>
+
+You are the best thing that ever happened to me.  
+I am lucky to have you in my life.
+
+Happy Birthday meri on the spot 🎂
+
+</p>
+
+<div class="gift" onclick="openGift()">🎁</div>
+
+<button onclick="showLove()">Click For One More Surprise</button>
+
+<audio autoplay loop>
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
+<script>
+
+/* HEART ANIMATION */
+
+function hearts(){
+
+const heart=document.createElement("div");
+heart.classList.add("heart");
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(Math.random()*30+20)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{heart.remove()},6000)
+
+}
+
+setInterval(hearts,300);
+
+
+/* GIFT MESSAGE */
+
+function openGift(){
+
+alert("Happy Birthday My Love ❤️🎂\nYou are my happiness forever.")
+
+}
+
+
+/* LOVE MESSAGE */
+
+function showLove(){
+
+alert("I Love You Forever ❤️\nYou Are My World 🌍")
+
+}
+
+</script>
+
+</body>
+</html>
